@@ -39,6 +39,12 @@ languages:
         - name: 标签
           url: tags/
           weight: 10
+        - name: 分类
+          url: categories/
+          weight: 10
+        - name: 系列
+          url: series/
+          weight: 10
 
   # en:
   #   languageName: "English"
