@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
-title: PaperMod
+baseURL: "https://xiaxuchen.github.io/blog/"
+title: 码屋
 paginate: 5
 theme: [hugo-PaperMod]
 enableInlineShortcodes: true
@@ -130,8 +130,8 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
+  description: "对代码的热爱，对优雅的追求"
+  author: 夏旭晨
   defaultLanguage: "cn"
   # author: ["Me", "You"] # multiple authors
 
