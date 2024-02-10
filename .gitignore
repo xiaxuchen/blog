@@ -27,3 +27,5 @@ _testmain.go
 .hugo_build.lock
 resources/_gen/
 .history
+.vscode
+.idea

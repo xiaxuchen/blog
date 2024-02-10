@@ -1,6 +1,6 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://xiaxuchen.github.io/blog/"
+baseURL: "https://xiaxuchen.github.io/"
 title: 码屋
 paginate: 5
 theme: [hugo-PaperMod]
@@ -11,7 +11,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
+mainsections: ["posts", "hugo"]
 defaultContentLanguage: "cn"
 # googleAnalytics: UA-123-45
 
@@ -25,7 +25,6 @@ languages:
     weight: 1
     title: 码屋-闪闪的小黑
     taxonomies:
-      category: categories
       tag: tags
       series: series
     menu:
@@ -38,9 +37,6 @@ languages:
           weight: 10
         - name: 标签
           url: tags/
-          weight: 10
-        - name: 分类
-          url: categories/
           weight: 10
         - name: 系列
           url: series/
@@ -139,6 +135,7 @@ params:
   description: "对代码的热爱，对优雅的追求"
   author: 夏旭晨
   defaultLanguage: "cn"
+  dateFormat: "2006-01-02"
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto

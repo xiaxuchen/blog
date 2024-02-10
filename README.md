@@ -1,57 +1,16 @@
-# hugo-paperMod Example
-
-This repository offers an example site for [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod)
-
-## Install
-
-Read Wiki => [hugo-PaperMod - Installation](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation)
-
-## Directory Tree
+# 使用指南
+## 持续部署
+每次提交，.github/hugo.yml将会调用github actions进行编译并上传到github pages进行同步，因此您可能需要申请一下github pages,那么你的博客就能通过github的域名公网访问了。
+## 预览
 
 ```
-.(site root)
-├── configTaxo.yml
-├── config.yml
-├── content
-│   ├── archives.fr.md
-│   ├── archives.md
-│   ├── posts
-│   │   ├── emoji-support.md
-│   │   ├── markdown-syntax.fa.md
-│   │   ├── markdown-syntax.fr.md
-│   │   ├── markdown-syntax.md
-│   │   ├── math-typesetting.md
-│   │   ├── papermod
-│   │   │   ├── _index.md
-│   │   │   ├── papermod-faq.md
-│   │   │   ├── papermod-features
-│   │   │   │   ├── images
-│   │   │   │   │   ├── homeinfo.jpg
-│   │   │   │   │   ├── profile.jpg
-│   │   │   │   │   └── regular.jpg
-│   │   │   │   └── index.md
-│   │   │   ├── papermod-icons.md
-│   │   │   ├── papermod-installation.md
-│   │   │   └── papermod-variables.md
-│   │   ├── placeholder-text.md
-│   │   └── rich-content.md
-│   ├── search.fr.md
-│   ├── search.md
-│   └── tags
-├── LICENSE
-├── README.md
-├── resources
-│   └── _gen
-│       ├── assets
-│       └── images
-├── static
-│   ├── android-chrome-192x192.png
-│   ├── android-chrome-512x512.png
-│   ├── apple-touch-icon.png
-│   ├── favicon-16x16.png
-│   ├── favicon-32x32.png
-│   ├── favicon.ico
-│   └── papermod-cover.png
-└── themes
-    └── hugo-PaperMod
+hugo server -D -d=./public
+```
+
+`-D`表示展示草稿,访问http://localhost:1313即可
+
+## 常用命令
+- 创建博客
+```
+hugo new markdown文件.md
 ```
