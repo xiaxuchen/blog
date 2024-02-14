@@ -37,3 +37,19 @@ public class MyPartitioner implements Partitioner {
 // 配置到producer的配置中
 props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, MyPartitioner.class.getName());
 ```
+
+# 分区副本重新分配
+上线新节点或者下线旧节点时，需要对partition的数据进行迁移。对于新节点我们需要将数据迁移到新节点上，而对于旧节点则需要从旧节点迁移走数据，这样我们可以通过json指定待迁移的topic名称，随后通过kafka自带的命令生成迁移计划，如下:
+```
+kafka-reassign-partitions.sh --bootstrap-server broker地址 --topics-to-move-json-file topics-to-move.json --broker-list "0,1" --generate
+```
+其中"0,1"可以根据需求改成最终存储数据的brokerid集合即可
+
+通过该命令会生成执行计划，我们可以将执行计划写入一个文件，这里我们叫做increase-replication-factor.json,随后输入以下命令即可执行计划
+
+```
+bin/kafka-reassign-partitionss.sh --bootstrap-server broker地址 
+--reassignment-json-file increase-replication-factor.json --execute
+```
+
+通过将--execute改成--verify，即可在执行后进行验证是否与执行计划相同
