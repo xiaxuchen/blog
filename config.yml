@@ -11,7 +11,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "hugo"]
+mainsections: ["posts"]
 defaultContentLanguage: "cn"
 # googleAnalytics: UA-123-45
 

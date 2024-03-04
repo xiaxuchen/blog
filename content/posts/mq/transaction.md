@@ -1,7 +1,11 @@
 ---
-title: "Transaction"
+title: "消息队列事务"
 date: 2024-02-10T20:35:11+08:00
-draft: true
+summary: "消息队列事务如何保证事务的一致性？"
+series: ["消息队列"]
+weight: 5
+tags: ["消息队列"]
+author: ["夏旭晨"]
 ---
 
 # Kafka 如何保证事务的一致性？

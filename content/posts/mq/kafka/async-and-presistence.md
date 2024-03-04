@@ -1,8 +1,8 @@
 ---
-title: "Kafka:Async and Persistence"
+title: "Kafka:同步和持久化"
 date: 2024-02-09T13:09:10+08:00
-draft: true
-series: ["深入学习Kafka"]
+# draft: true
+series: ["消息队列"]
 weight: 5
 tags: ["消息队列", "Kafka"]
 author: ["夏旭晨"]
@@ -45,4 +45,5 @@ Kafka 可以配置参数[acks](https://kafka.apache.org/documentation/#producerc
   即完全可靠性保证为，replications > 1 && acks == -1 && min.insync.replicas > 1
 
 # 问题
-acks=-1时，leader节点持久化后，宕机了，那么消息是否算是发送成功了，还是说有两阶段提交机制。重新选择leader后，重发消息，持久化后，原leader上线了，那么他需要同步消息吗？
+
+acks=-1 时，leader 节点持久化后，宕机了，那么消息是否算是发送成功了，还是说有两阶段提交机制。重新选择 leader 后，重发消息，持久化后，原 leader 上线了，那么他需要同步消息吗？
