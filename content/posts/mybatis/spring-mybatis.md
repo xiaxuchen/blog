@@ -1,7 +1,10 @@
 ---
 title: "Spring Mybatis"
+date: 2024-02-09T13:09:10+08:00
+series: ["mybatis"]
+weight: 5
+tags: ["mybatis"]
 date: 2024-03-25T13:16:31+08:00
-draft: true
 ---
 # Spring是如何以同一个Mapper使用不同SqlSession的？
 Spring通过MapperScan注解，注册PostProcessor，然后在PostProcessor中替换掉mapper的接口的BeanClass为MapperFactoryBean,并将Mapper原来的Class以参数传递进去，这样构建的Mapper都由MapperFactoryBean进行创建，而Mapper的SqlSession实现类则是SqlSessionTemplate,其是一个代理类，内部代理的SqlSession通过JDK动态代理拦截方法的调用，每次方法调用会获取SqlSession，`SqlSession sqlSession = SqlSessionUtils.getSqlSession(SqlSessionTemplate.this.sqlSessionFactory, SqlSessionTemplate.this.executorType, SqlSessionTemplate.this.exceptionTranslator);
